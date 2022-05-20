@@ -14,7 +14,7 @@ target 'TerraStation' do
   pod 'Permission-FaceID', :path => "#{permissions_path}/FaceID"
 
   pod 'TrezorCrypto'
-  pod 'IOSSecuritySuite'  
+  pod 'IOSSecuritySuite'
 
   config = use_native_modules!
   use_react_native!(
@@ -31,7 +31,7 @@ target 'TerraStation' do
   #
   # Note that if you have use_frameworks! enabled, Flipper will not work and
   # you should disable these next few lines.
-  use_flipper!('Flipper' => '0.87.0', 'Flipper-Folly' => '2.5.3', 'Flipper-RSocket' => '1.3.1')
+  use_flipper!({'Flipper' => '0.87.0', 'Flipper-Folly' => '2.5.3', 'Flipper-RSocket' => '1.3.1'})
 
   post_install do |installer|
     flipper_post_install(installer)
@@ -42,4 +42,3 @@ target 'TerraStation' do
     end
   end
 end
-
